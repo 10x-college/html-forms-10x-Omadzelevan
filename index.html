@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="./styles/styles.css" >
+    <title>Jovian Drift SOS</title>
+  </head>
+  <body>
+    <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+    <form method="post" action="#">
+      <fieldset>
+        <legend>Pilot Credentials</legend>
+        <label for="Pilot-Name">Pilot Name:</label>
+        <input
+          type="text"
+          name="Pilot_name"
+          id="Pilot-Name"
+          required
+          placeholder="Enter name"
+        />
+        <label for="Access-Code">Access Code:</label>
+        <input type="password" name="Access_Code" id="Access-Code" required />
+        <label for="Command-Email"> Command Email: </label>
+        <input type="email" name="Command_Email" id="Command-Email" required />
+      </fieldset>
+      <fieldset>
+        <legend>Vessel Diagnostics</legend>
+        <label for="Hull-Damage">Hull Damage (%):</label>
+        <input type="number" name="Hull_Damage" id="Hull-Damage" required />
+        <label for="Emergency-Level">Emergency Level:</label>
+        <select name="Emergency_Level" id="Emergency-Level" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Mission Log & Evidence</legend>
+        <label for="SOS-Message">SOS Message:</label>
+        <textarea name="SOS_Message" id="SOS-Message" required rows="3">
+        </textarea>
+        <div>
+          <input type="checkbox" id="quarantine" name="quarantine" required />
+          <label for="quarantine">I agree to quarantine protocols.</label>
+        </div>
+      </fieldset>
+      <button type="submit">INITIATE TRANSMISSION</button>
+      <button type="reset">RESET SYSTEM</button>
+    </form>
+    <script src="./scripts/launch.js"></script>
+  </body>
+</html>
